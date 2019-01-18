@@ -1,25 +1,25 @@
 {
-  "name": "mmasiukevich/cache",
-  "description": "PHP Service Bus (publish-subscribe pattern) cache component",
+  "name": "php-service-bus/cache",
+  "description": "PHP Service Bus (publish-subscribe pattern) cache implementation",
   "type": "library",
-  "keywords": [],
+  "keywords": ["cqrs", "event-sourcing", "async-php", "command-bus", "messaging"],
   "authors": [
     {
       "name": "Masiukevich Maksim",
-      "email": "desperado@minsk-info.ru",
+      "email": "dev@async-php.com",
       "homepage": "https://github.com/mmasiukevich",
-      "role": "Developer"
+      "role": "Maintainer"
     }
   ],
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Desperado\\ServiceBus\\Cache\\": "src/"
+      "ServiceBus\\Cache\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Desperado\\ServiceBus\\Cache\\Tests\\": "tests/"
+      "ServiceBus\\Cache\\Tests\\": "tests/"
     }
   },
   "require": {

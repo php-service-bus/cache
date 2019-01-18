@@ -1,20 +1,20 @@
 <?php
 
 /**
- * PHP Service Bus (publish-subscribe pattern implementation) cache component
+ * PHP Service Bus (publish-subscribe pattern) cache implementation
  *
- * @author  Maksim Masiukevich <desperado@minsk-info.ru>
+ * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
  * @license https://opensource.org/licenses/MIT
  */
 
 declare(strict_types = 1);
 
-namespace Desperado\ServiceBus\Cache\Tests\InMemory;
+namespace ServiceBus\Cache\Tests\InMemory;
 
 use function Amp\Promise\wait;
-use Desperado\ServiceBus\Cache\InMemory\InMemoryCacheAdapter;
-use Desperado\ServiceBus\Cache\InMemory\InMemoryStorage;
+use ServiceBus\Cache\InMemory\InMemoryCacheAdapter;
+use ServiceBus\Cache\InMemory\InMemoryStorage;
 use PHPUnit\Framework\TestCase;
 
 /**
