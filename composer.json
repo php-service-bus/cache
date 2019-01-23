@@ -14,12 +14,12 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "ServiceBus\\Infrastructure\\Cache\\": "src/"
+      "ServiceBus\\Cache\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ServiceBus\\Infrastructure\\Cache\\Tests\\": "tests/"
+      "ServiceBus\\Cache\\Tests\\": "tests/"
     }
   },
   "require": {

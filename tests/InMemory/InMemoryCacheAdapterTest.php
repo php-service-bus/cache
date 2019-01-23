@@ -10,12 +10,12 @@
 
 declare(strict_types = 1);
 
-namespace ServiceBus\Infrastructure\Cache\Tests\InMemory;
+namespace ServiceBus\Cache\Tests\InMemory;
 
 use function Amp\Promise\wait;
 use PHPUnit\Framework\TestCase;
-use ServiceBus\Infrastructure\Cache\InMemory\InMemoryCacheAdapter;
-use ServiceBus\Infrastructure\Cache\InMemory\InMemoryStorage;
+use ServiceBus\Cache\InMemory\InMemoryCacheAdapter;
+use ServiceBus\Cache\InMemory\InMemoryStorage;
 
 /**
  *

@@ -10,11 +10,11 @@
 
 declare(strict_types = 1);
 
-namespace ServiceBus\Infrastructure\Cache\InMemory;
+namespace ServiceBus\Cache\InMemory;
 
 use Amp\Promise;
 use Amp\Success;
-use ServiceBus\Infrastructure\Cache\CacheAdapter;
+use ServiceBus\Cache\CacheAdapter;
 
 /**
  *

@@ -10,7 +10,7 @@
 
 declare(strict_types = 1);
 
-namespace ServiceBus\Infrastructure\Cache\InMemory;
+namespace ServiceBus\Cache\InMemory;
 
 /**
  * In memory data storage

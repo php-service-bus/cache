@@ -10,7 +10,7 @@
 
 declare(strict_types = 1);
 
-namespace ServiceBus\Infrastructure\Cache;
+namespace ServiceBus\Cache;
 
 use Amp\Promise;
 
