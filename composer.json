@@ -1,6 +1,6 @@
 {
   "name": "php-service-bus/cache",
-  "description": "PHP Service Bus (publish-subscribe pattern) cache implementation",
+  "description": "PHP Service Bus simple cache implementation",
   "type": "library",
   "keywords": ["cqrs", "event-sourcing", "async-php", "command-bus", "messaging"],
   "authors": [
@@ -14,21 +14,21 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "ServiceBus\\Cache\\": "src/"
+      "ServiceBus\\Infrastructure\\Cache\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ServiceBus\\Cache\\Tests\\": "tests/"
+      "ServiceBus\\Infrastructure\\Cache\\Tests\\": "tests/"
     }
   },
   "require": {
-    "php": ">=7.2",
-    "amphp/amp": "^2"
+    "php": ">=7.2"
   },
   "require-dev": {
     "phpunit/phpunit": "^7",
-    "vimeo/psalm": "^3"
+    "vimeo/psalm": "^3",
+    "amphp/amp": "^2"
   },
   "prefer-stable": true,
   "minimum-stability": "dev",

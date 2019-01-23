@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Service Bus (publish-subscribe pattern) cache implementation
+ * PHP Service Bus simple cache implementation
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -10,7 +10,7 @@
 
 declare(strict_types = 1);
 
-namespace ServiceBus\Cache;
+namespace ServiceBus\Infrastructure\Cache;
 
 use Amp\Promise;
 
