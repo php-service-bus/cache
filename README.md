@@ -4,5 +4,6 @@
 
 ## What is it?
 
-Simple in memory (at this moment) cache implementation for use in [service-bus](https://github.com/php-service-bus/service-bus) framework.
+Simple in memory cache implementation.
+
 To implement your own adapters there is an [CacheAdapter](https://github.com/php-service-bus/cache/blob/master/src/CacheAdapter.php) interface

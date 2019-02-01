@@ -14,9 +14,11 @@
     </php>
 
     <testsuites>
-        <testsuite name="Service Bus cache component">
+
+        <testsuite name="Cache component">
             <directory>./tests/</directory>
         </testsuite>
+
     </testsuites>
 
     <filter>

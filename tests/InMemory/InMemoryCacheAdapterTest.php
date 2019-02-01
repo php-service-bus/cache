@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Service Bus simple cache implementation
+ * Cache implementation
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT

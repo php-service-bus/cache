@@ -1,7 +1,7 @@
 <?php
 
 /**
- * PHP Service Bus simple cache implementation
+ * Cache implementation
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -27,6 +27,8 @@ final class InMemoryCacheAdapter implements CacheAdapter
     private $storage;
 
     /**
+     * @psalm-suppress MixedTypeCoercion
+     *
      * @inheritDoc
      */
     public function get(string $key): Promise
@@ -35,6 +37,8 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
+     * @psalm-suppress MixedTypeCoercion
+     *
      * @inheritDoc
      */
     public function has(string $key): Promise
@@ -43,6 +47,8 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
+     * @psalm-suppress MixedTypeCoercion
+     *
      * @inheritDoc
      */
     public function remove(string $key): Promise
@@ -53,6 +59,8 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
+     * @psalm-suppress MixedTypeCoercion
+     *
      * @inheritDoc
      */
     public function save(string $key, $value, int $ttl = 0): Promise
@@ -64,6 +72,8 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
+     * @psalm-suppress MixedTypeCoercion
+     *
      * @inheritDoc
      */
     public function clear(): Promise
