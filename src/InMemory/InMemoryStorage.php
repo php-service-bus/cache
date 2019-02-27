@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Cache implementation
+ * Cache implementation.
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -13,7 +13,7 @@ declare(strict_types = 1);
 namespace ServiceBus\Cache\InMemory;
 
 /**
- * In memory data storage
+ * In memory data storage.
  *
  * @internal
  */
@@ -26,12 +26,14 @@ final class InMemoryStorage
 
     /**
      * @psalm-var array<string, int|string|float|null|array>
+     *
      * @var array
      */
     private $storage = [];
 
     /**
      * @psalm-var array<string, int>
+     *
      * @var array
      */
     private $expires = [];
@@ -41,7 +43,7 @@ final class InMemoryStorage
      */
     public static function instance(): self
     {
-        if(null === self::$instance)
+        if (null === self::$instance)
         {
             self::$instance = new self();
         }
@@ -50,7 +52,7 @@ final class InMemoryStorage
     }
 
     /**
-     * Reset instance
+     * Reset instance.
      *
      * @return void
      */
@@ -60,7 +62,7 @@ final class InMemoryStorage
     }
 
     /**
-     * Remove stored entries
+     * Remove stored entries.
      *
      * @return void
      */
@@ -71,7 +73,7 @@ final class InMemoryStorage
     }
 
     /**
-     * Has stored entry
+     * Has stored entry.
      *
      * @param string $key
      *
@@ -83,19 +85,19 @@ final class InMemoryStorage
     }
 
     /**
-     * Receive stored value
+     * Receive stored value.
      *
      * @param string $key
      *
-     * @return int|string|float|null|array
+     * @return array|float|int|string|null
      */
     public function get(string $key)
     {
-        if(true === isset($this->expires[$key]))
+        if (true === isset($this->expires[$key]))
         {
             $expired = -1 === $this->expires[$key] ? false : \time() > $this->expires[$key];
 
-            if(true === $expired)
+            if (true === $expired)
             {
                 $this->remove($key);
 
@@ -109,7 +111,7 @@ final class InMemoryStorage
     }
 
     /**
-     * Remove stored value
+     * Remove stored value.
      *
      * @param string $key
      *
@@ -121,10 +123,10 @@ final class InMemoryStorage
     }
 
     /**
-     * Store specified value
+     * Store specified value.
      *
      * @param string                      $key
-     * @param int|string|float|null|array $value
+     * @param array|float|int|string|null $value
      * @param int                         $ttl
      *
      * @return void
@@ -137,7 +139,6 @@ final class InMemoryStorage
 
     private function __construct()
     {
-
     }
 
     /**
@@ -145,6 +146,5 @@ final class InMemoryStorage
      */
     private function __clone()
     {
-
     }
 }

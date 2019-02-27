@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Cache implementation
+ * Cache implementation.
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -28,7 +28,7 @@ final class InMemoryCacheAdapterTest extends TestCase
     private $adapter;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function setUp(): void
     {
@@ -40,7 +40,7 @@ final class InMemoryCacheAdapterTest extends TestCase
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function tearDown(): void
     {
@@ -54,9 +54,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function getUnknownEntry(): void
     {
@@ -66,9 +67,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function hasUnknownEntry(): void
     {
@@ -78,9 +80,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function removeUnknownEntry(): void
     {
@@ -90,9 +93,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function clear(): void
     {
@@ -105,9 +109,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function getExpired(): void
     {
@@ -119,9 +124,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function getExists(): void
     {
@@ -132,9 +138,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function hasExists(): void
     {
@@ -145,9 +152,10 @@ final class InMemoryCacheAdapterTest extends TestCase
     /**
      * @test
      *
+     * @throws \Throwable
+     *
      * @return void
      *
-     * @throws \Throwable
      */
     public function removeExists(): void
     {

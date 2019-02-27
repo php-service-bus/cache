@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Cache implementation
+ * Cache implementation.
  *
  * @author  Maksim Masiukevich <dev@async-php.com>
  * @license MIT
@@ -15,23 +15,23 @@ namespace ServiceBus\Cache;
 use Amp\Promise;
 
 /**
- * Cache adapter
+ * Cache adapter.
  */
 interface CacheAdapter
 {
     /**
-     * Receive stored entry
+     * Receive stored entry.
      *
      * @psalm-suppress MixedTypeCoercion
      *
      * @param string $key
      *
-     * @return Promise<int|string|float|null|array>
+     * @return Promise<array|float|int|string|null>
      */
     public function get(string $key): Promise;
 
     /**
-     * Has stored entry
+     * Has stored entry.
      *
      * @param string $key
      *
@@ -40,7 +40,7 @@ interface CacheAdapter
     public function has(string $key): Promise;
 
     /**
-     * Remove entry
+     * Remove entry.
      *
      * @param string $key
      *
@@ -49,10 +49,10 @@ interface CacheAdapter
     public function remove(string $key): Promise;
 
     /**
-     * Save new cache entry
+     * Save new cache entry.
      *
      * @param string                      $key
-     * @param int|string|float|null|array $value
+     * @param array|float|int|string|null $value
      * @param int                         $ttl
      *
      * @return Promise<bool>
@@ -60,7 +60,7 @@ interface CacheAdapter
     public function save(string $key, $value, int $ttl = 0): Promise;
 
     /**
-     * Clear storage
+     * Clear storage.
      *
      * @return Promise<bool>
      */
