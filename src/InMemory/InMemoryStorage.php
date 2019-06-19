@@ -137,6 +137,9 @@ final class InMemoryStorage
         $this->expires[$key] = 0 < $ttl ? \time() + $ttl : -1;
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     private function __construct()
     {
     }
