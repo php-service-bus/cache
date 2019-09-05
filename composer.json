@@ -34,7 +34,7 @@
     "phpunit/phpunit": "v8.3.*",
     "vimeo/psalm": "v3.4.*",
     "phpstan/phpstan": "v0.11.*",
-    "amphp/amp": "v2.1.*"
+    "amphp/amp": "v2.2.*"
   },
   "prefer-stable": true,
   "minimum-stability": "stable",
