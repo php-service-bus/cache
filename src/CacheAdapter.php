@@ -24,16 +24,12 @@ interface CacheAdapter
      *
      * @psalm-suppress MixedTypeCoercion
      *
-     * @param string $key
-     *
      * @return Promise<array|float|int|string|null>
      */
     public function get(string $key): Promise;
 
     /**
      * Has stored entry.
-     *
-     * @param string $key
      *
      * @return Promise<bool>
      */
@@ -42,8 +38,6 @@ interface CacheAdapter
     /**
      * Remove entry.
      *
-     * @param string $key
-     *
      * @return Promise<bool>
      */
     public function remove(string $key): Promise;
@@ -51,9 +45,7 @@ interface CacheAdapter
     /**
      * Save new cache entry.
      *
-     * @param string                      $key
      * @param array|float|int|string|null $value
-     * @param int                         $ttl
      *
      * @return Promise<bool>
      */

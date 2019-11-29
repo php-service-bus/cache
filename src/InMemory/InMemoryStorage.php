@@ -19,28 +19,22 @@ namespace ServiceBus\Cache\InMemory;
  */
 final class InMemoryStorage
 {
-    /**
-     * @var self|null
-     */
-    private static $instance;
+    private static ?InMemoryStorage $instance;
 
     /**
      * @psalm-var array<string, int|string|float|null|array>
-     *
-     * @var array
      */
-    private $storage = [];
+    private array
+
+ $storage = [];
 
     /**
      * @psalm-var array<string, int>
-     *
-     * @var array
      */
-    private $expires = [];
+    private array
 
-    /**
-     * @return self
-     */
+ $expires = [];
+
     public static function instance(): self
     {
         if (null === self::$instance)
@@ -53,8 +47,6 @@ final class InMemoryStorage
 
     /**
      * Reset instance.
-     *
-     * @return void
      */
     public function reset(): void
     {
@@ -63,8 +55,6 @@ final class InMemoryStorage
 
     /**
      * Remove stored entries.
-     *
-     * @return void
      */
     public function clear(): void
     {
@@ -74,10 +64,6 @@ final class InMemoryStorage
 
     /**
      * Has stored entry.
-     *
-     * @param string $key
-     *
-     * @return bool
      */
     public function has(string $key): bool
     {
@@ -86,8 +72,6 @@ final class InMemoryStorage
 
     /**
      * Receive stored value.
-     *
-     * @param string $key
      *
      * @return array|float|int|string|null
      */
@@ -112,10 +96,6 @@ final class InMemoryStorage
 
     /**
      * Remove stored value.
-     *
-     * @param string $key
-     *
-     * @return void
      */
     public function remove(string $key): void
     {
@@ -125,11 +105,7 @@ final class InMemoryStorage
     /**
      * Store specified value.
      *
-     * @param string                      $key
      * @param array|float|int|string|null $value
-     * @param int                         $ttl
-     *
-     * @return void
      */
     public function push(string $key, $value, int $ttl = 0): void
     {
