@@ -19,7 +19,7 @@ namespace ServiceBus\Cache\InMemory;
  */
 final class InMemoryStorage
 {
-    private static ?InMemoryStorage $instance;
+    private static ?self $instance;
 
     /**
      * @psalm-var array<string, int|string|float|null|array>
@@ -37,7 +37,7 @@ final class InMemoryStorage
 
     public static function instance(): self
     {
-        if (null === self::$instance)
+        if (false === isset(self::$instance))
         {
             self::$instance = new self();
         }
