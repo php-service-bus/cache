@@ -24,16 +24,12 @@ final class InMemoryStorage
     /**
      * @psalm-var array<string, int|string|float|null|array>
      */
-    private array
-
- $storage = [];
+    private array $storage = [];
 
     /**
      * @psalm-var array<string, int>
      */
-    private array
-
- $expires = [];
+    private array $expires = [];
 
     public static function instance(): self
     {
