@@ -1,7 +1,7 @@
 ## What is it?
-[![Build Status](https://travis-ci.org/php-service-bus/cache.svg?branch=v4.4)](https://travis-ci.org/php-service-bus/cache)
-[![Code Coverage](https://scrutinizer-ci.com/g/php-service-bus/cache/badges/coverage.png?b=v4.4)](https://scrutinizer-ci.com/g/php-service-bus/cache/?branch=v4.4)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-service-bus/cache/badges/quality-score.png?b=v4.4)](https://scrutinizer-ci.com/g/php-service-bus/cache/?branch=v4.4)
+[![Build Status](https://travis-ci.org/php-service-bus/cache.svg?branch=v4.0)](https://travis-ci.org/php-service-bus/cache)
+[![Code Coverage](https://scrutinizer-ci.com/g/php-service-bus/cache/badges/coverage.png?b=v4.0)](https://scrutinizer-ci.com/g/php-service-bus/cache/?branch=v4.0)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-service-bus/cache/badges/quality-score.png?b=v4.0)](https://scrutinizer-ci.com/g/php-service-bus/cache/?branch=v4.0)
 
 This component is part of the [PHP Service Bus](https://github.com/php-service-bus/service-bus).
 
