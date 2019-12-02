@@ -69,15 +69,13 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
-     * @psalm-suppress MixedTypeCoercion
-     *
      * {@inheritdoc}
      */
     public function clear(): Promise
     {
         $this->storage->clear();
 
-        return new Success(true);
+        return new Success();
     }
 
     public function __construct()

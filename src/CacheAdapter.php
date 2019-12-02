@@ -24,37 +24,40 @@ interface CacheAdapter
      *
      * @psalm-suppress MixedTypeCoercion
      *
-     * @return Promise<array|float|int|string|null>
+     * @return Promise
      */
     public function get(string $key): Promise;
 
     /**
      * Has stored entry.
      *
-     * @return Promise<bool>
+     * @return Promise
      */
     public function has(string $key): Promise;
 
     /**
      * Remove entry.
+     * If removed it will return true; otherwise false
      *
-     * @return Promise<bool>
+     * @return Promise
      */
     public function remove(string $key): Promise;
 
     /**
      * Save new cache entry.
+     * If saved it will return true; otherwise false
      *
      * @param array|float|int|string|null $value
      *
-     * @return Promise<bool>
+     * @return Promise
      */
     public function save(string $key, $value, int $ttl = 0): Promise;
 
     /**
      * Clear storage.
+     * Returns bool
      *
-     * @return Promise<bool>
+     * @return Promise
      */
     public function clear(): Promise;
 }

@@ -19,7 +19,7 @@ namespace ServiceBus\Cache\InMemory;
  */
 final class InMemoryStorage
 {
-    private static ?self $instance;
+    private static ?self $instance = null;
 
     /**
      * @psalm-var array<string, int|string|float|null|array>
@@ -33,7 +33,7 @@ final class InMemoryStorage
 
     public static function instance(): self
     {
-        if (false === isset(self::$instance))
+        if (self::$instance === null)
         {
             self::$instance = new self();
         }
@@ -73,11 +73,11 @@ final class InMemoryStorage
      */
     public function get(string $key)
     {
-        if (true === isset($this->expires[$key]))
+        if (isset($this->expires[$key]) === true)
         {
             $expired = -1 === $this->expires[$key] ? false : \time() > $this->expires[$key];
 
-            if (true === $expired)
+            if ($expired === true)
             {
                 $this->remove($key);
 
