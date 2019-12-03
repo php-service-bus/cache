@@ -21,7 +21,8 @@ use ServiceBus\Cache\CacheAdapter;
  */
 final class InMemoryCacheAdapter implements CacheAdapter
 {
-    private InMemoryStorage $storage;
+    /** @var InMemoryStorage  */
+    private $storage;
 
     /**
      * @psalm-suppress MixedTypeCoercion
