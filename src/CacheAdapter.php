@@ -21,17 +21,23 @@ interface CacheAdapter
 {
     /**
      * Receive stored entry.
+     *
+     * @return Promise<array|float|int|string|null>
      */
     public function get(string $key): Promise;
 
     /**
      * Has stored entry.
+     *
+     * @return Promise<bool>
      */
     public function has(string $key): Promise;
 
     /**
      * Remove entry.
      * If removed it will return true; otherwise false
+     *
+     * @return Promise<bool>
      */
     public function remove(string $key): Promise;
 
@@ -40,11 +46,15 @@ interface CacheAdapter
      * If saved it will return true; otherwise false
      *
      * @param array|float|int|string|null $value
+     *
+     * @return Promise<bool>
      */
     public function save(string $key, $value, int $ttl = 0): Promise;
 
     /**
      * Clear storage.
+     *
+     * @return Promise<null>
      */
     public function clear(): Promise;
 }

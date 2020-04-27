@@ -35,8 +35,6 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
-     * @psalm-suppress MixedTypeCoercion
-     *
      * {@inheritdoc}
      */
     public function has(string $key): Promise
@@ -45,8 +43,6 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
-     * @psalm-suppress MixedTypeCoercion
-     *
      * {@inheritdoc}
      */
     public function remove(string $key): Promise
@@ -57,8 +53,6 @@ final class InMemoryCacheAdapter implements CacheAdapter
     }
 
     /**
-     * @psalm-suppress MixedTypeCoercion
-     *
      * {@inheritdoc}
      */
     public function save(string $key, $value, int $ttl = 0): Promise
