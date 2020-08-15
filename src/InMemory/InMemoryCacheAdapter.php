@@ -15,36 +15,26 @@ namespace ServiceBus\Cache\InMemory;
 use Amp\Promise;
 use Amp\Success;
 use ServiceBus\Cache\CacheAdapter;
+use function Amp\call;
 
 /**
  *
  */
 final class InMemoryCacheAdapter implements CacheAdapter
 {
-    /** @var InMemoryStorage  */
+    /** @var InMemoryStorage */
     private $storage;
 
-    /**
-     * @psalm-suppress MixedTypeCoercion
-     *
-     * {@inheritdoc}
-     */
     public function get(string $key): Promise
     {
         return new Success($this->storage->get($key));
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function has(string $key): Promise
     {
         return new Success($this->storage->has($key));
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function remove(string $key): Promise
     {
         $this->storage->remove($key);
@@ -52,9 +42,6 @@ final class InMemoryCacheAdapter implements CacheAdapter
         return new Success(true);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function save(string $key, $value, int $ttl = 0): Promise
     {
         /** @psalm-suppress MixedArgument */
@@ -63,14 +50,14 @@ final class InMemoryCacheAdapter implements CacheAdapter
         return new Success(true);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function clear(): Promise
     {
-        $this->storage->clear();
-
-        return new Success();
+        return call(
+            function (): void
+            {
+                $this->storage->clear();
+            }
+        );
     }
 
     public function __construct()

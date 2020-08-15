@@ -54,7 +54,7 @@ interface CacheAdapter
     /**
      * Clear storage.
      *
-     * @return Promise<null>
+     * @return Promise<void>
      */
     public function clear(): Promise;
 }

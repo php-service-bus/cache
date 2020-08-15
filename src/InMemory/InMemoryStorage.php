@@ -74,11 +74,11 @@ final class InMemoryStorage
      */
     public function get(string $key)
     {
-        if (isset($this->expires[$key]) === true)
+        if (isset($this->expires[$key]))
         {
             $expired = $this->expires[$key] === -1 ? false : \time() > $this->expires[$key];
 
-            if ($expired === true)
+            if ($expired)
             {
                 $this->remove($key);
 
