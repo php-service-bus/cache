@@ -20,7 +20,7 @@ namespace ServiceBus\Cache\InMemory;
 final class InMemoryStorage
 {
     /** @var self|null */
-    private static $instance = null;
+    private static $instance;
 
     /**
      * @psalm-var array<string, int|string|float|null|array>
@@ -72,7 +72,7 @@ final class InMemoryStorage
      *
      * @return array|float|int|string|null
      */
-    public function get(string $key)
+    public function get(string $key): mixed
     {
         if (isset($this->expires[$key]))
         {
