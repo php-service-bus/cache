@@ -1,8 +1,9 @@
 ## What is it?
+
+[![Packagist](https://img.shields.io/packagist/dt/php-service-bus/cache.svg)](https://packagist.org/packages/php-service-bus/cache)
 ![Continuous Integration](https://github.com/php-service-bus/cache/workflows/Continuous%20Integration/badge.svg)
+[![codecov](https://codecov.io/gh/php-service-bus/cache/branch/v4.2/graph/badge.svg?token=0bKwdiuo0S)](https://codecov.io/gh/php-service-bus/cache)
 [![Shepherd](https://shepherd.dev/github/php-service-bus/cache/coverage.svg)](https://shepherd.dev/github/php-service-bus/cache)
-[![Code Coverage](https://scrutinizer-ci.com/g/php-service-bus/cache/badges/coverage.png?b=v4.2)](https://scrutinizer-ci.com/g/php-service-bus/cache/?branch=v4.2)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/php-service-bus/cache/badges/quality-score.png?b=v4.2)](https://scrutinizer-ci.com/g/php-service-bus/cache/?branch=v4.2)
 
 This component is part of the [PHP Service Bus](https://github.com/php-service-bus/service-bus).
 
@@ -10,7 +11,7 @@ Simple in memory cache implementation.
 To implement your own adapters there is an [CacheAdapter](https://github.com/php-service-bus/cache/blob/v4.2/src/CacheAdapter.php) interface
 
 ## Contributing
-Contributions are welcome! Please read [CONTRIBUTING](CONTRIBUTING.md) for details.
+Contributions are welcome! Please read [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Communication Channels
 You can find help and discussion in the following places:
