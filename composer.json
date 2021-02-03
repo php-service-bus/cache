@@ -32,7 +32,7 @@
   "require-dev": {
     "php-service-bus/code-style-config": "v1.3.*",
     "phpunit/phpunit": "v9.5.*",
-    "vimeo/psalm": "v4.3.*",
+    "vimeo/psalm": "v4.4.*",
     "phpstan/phpstan": "v0.12.*",
     "amphp/amp": "v2.5.*"
   },
