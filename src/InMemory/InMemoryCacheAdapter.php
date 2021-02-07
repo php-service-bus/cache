@@ -22,7 +22,9 @@ use function Amp\call;
  */
 final class InMemoryCacheAdapter implements CacheAdapter
 {
-    /** @var InMemoryStorage */
+    /**
+     * @var InMemoryStorage
+     */
     private $storage;
 
     public function get(string $key): Promise

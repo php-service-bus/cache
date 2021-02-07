@@ -19,7 +19,9 @@ namespace ServiceBus\Cache\InMemory;
  */
 final class InMemoryStorage
 {
-    /** @var self|null */
+    /**
+     * @var self|null
+     */
     private static $instance;
 
     /**

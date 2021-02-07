@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUnhandledExceptionInspection */
 
 /**
  * Cache implementation.
@@ -27,9 +27,6 @@ final class InMemoryCacheAdapterTest extends TestCase
      */
     private $adapter;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -39,9 +36,6 @@ final class InMemoryCacheAdapterTest extends TestCase
         $this->adapter = new InMemoryCacheAdapter();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -53,37 +47,22 @@ final class InMemoryCacheAdapterTest extends TestCase
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function getUnknownEntry(): void
     {
-        static::assertNull(wait($this->adapter->get('qwerty')));
+        self::assertNull(wait($this->adapter->get('qwerty')));
     }
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function hasUnknownEntry(): void
     {
-        static::assertFalse(wait($this->adapter->has('qwerty')));
+        self::assertFalse(wait($this->adapter->has('qwerty')));
     }
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function removeUnknownEntry(): void
     {
@@ -92,77 +71,56 @@ final class InMemoryCacheAdapterTest extends TestCase
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function clear(): void
     {
         wait($this->adapter->save('qwerty', 'root', 50));
-        static::assertTrue(wait($this->adapter->has('qwerty')));
+        self::assertTrue(wait($this->adapter->has('qwerty')));
+
         wait($this->adapter->clear());
-        static::assertFalse(wait($this->adapter->has('qwerty')));
+        self::assertFalse(wait($this->adapter->has('qwerty')));
     }
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function getExpired(): void
     {
         wait($this->adapter->save('qwerty', 'root', 1));
         \sleep(2);
-        static::assertNull(wait($this->adapter->get('qwerty')));
+
+        self::assertNull(wait($this->adapter->get('qwerty')));
     }
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function getExists(): void
     {
         wait($this->adapter->save('qwerty', 'root', 50));
-        static::assertSame('root', wait($this->adapter->get('qwerty')));
+
+        self::assertSame('root', wait($this->adapter->get('qwerty')));
     }
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function hasExists(): void
     {
         wait($this->adapter->save('qwerty', 'root', 50));
-        static::assertTrue(wait($this->adapter->has('qwerty')));
+
+        self::assertTrue(wait($this->adapter->has('qwerty')));
     }
 
     /**
      * @test
-     *
-     * @throws \Throwable
-     *
-     * @return void
-     *
      */
     public function removeExists(): void
     {
         wait($this->adapter->save('qwerty', 'root', 50));
-        static::assertTrue(wait($this->adapter->has('qwerty')));
+        self::assertTrue(wait($this->adapter->has('qwerty')));
 
         wait($this->adapter->remove('qwerty'));
-        static::assertFalse(wait($this->adapter->has('qwerty')));
+        self::assertFalse(wait($this->adapter->has('qwerty')));
     }
 }
