@@ -1,4 +1,6 @@
-<?php /** @noinspection PhpUnhandledExceptionInspection */
+<?php
+
+/** @noinspection PhpUnhandledExceptionInspection */
 
 /**
  * Cache implementation.
@@ -8,14 +10,14 @@
  * @license https://opensource.org/licenses/MIT
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace ServiceBus\Cache\Tests\InMemory;
 
-use function Amp\Promise\wait;
 use PHPUnit\Framework\TestCase;
 use ServiceBus\Cache\InMemory\InMemoryCacheAdapter;
 use ServiceBus\Cache\InMemory\InMemoryStorage;
+use function Amp\Promise\wait;
 
 /**
  *
