@@ -71,14 +71,12 @@ final class InMemoryStorage
 
     /**
      * Receive stored value.
-     *
-     * @return array|float|int|string|null
      */
-    public function get(string $key): mixed
+    public function get(string $key): array|float|int|string|null
     {
         if (isset($this->expires[$key]))
         {
-            $expired = $this->expires[$key] === -1 ? false : \time() > $this->expires[$key];
+            $expired = !($this->expires[$key] === -1) && \time() > $this->expires[$key];
 
             if ($expired)
             {
@@ -103,10 +101,8 @@ final class InMemoryStorage
 
     /**
      * Store specified value.
-     *
-     * @param array|float|int|string|null $value
      */
-    public function push(string $key, $value, int $ttl = 0): void
+    public function push(string $key, array|float|int|string|null $value, int $ttl = 0): void
     {
         $this->storage[$key] = $value;
         $this->expires[$key] = 0 < $ttl ? \time() + $ttl : -1;

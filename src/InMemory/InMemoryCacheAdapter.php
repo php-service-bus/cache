@@ -17,9 +17,6 @@ use Amp\Success;
 use ServiceBus\Cache\CacheAdapter;
 use function Amp\call;
 
-/**
- *
- */
 final class InMemoryCacheAdapter implements CacheAdapter
 {
     /**
@@ -44,7 +41,7 @@ final class InMemoryCacheAdapter implements CacheAdapter
         return new Success(true);
     }
 
-    public function save(string $key, $value, int $ttl = 0): Promise
+    public function save(string $key, array|float|int|string|null $value, int $ttl = 0): Promise
     {
         $this->storage->push($key, $value, $ttl);
 

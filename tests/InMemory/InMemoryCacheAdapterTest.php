@@ -69,6 +69,8 @@ final class InMemoryCacheAdapterTest extends TestCase
     public function removeUnknownEntry(): void
     {
         wait($this->adapter->remove('qwerty'));
+
+        self::assertTrue(true);
     }
 
     /**

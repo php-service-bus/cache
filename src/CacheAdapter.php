@@ -45,11 +45,9 @@ interface CacheAdapter
      * Save new cache entry.
      * If saved it will return true; otherwise false
      *
-     * @param array|float|int|string|null $value
-     *
      * @return Promise<bool>
      */
-    public function save(string $key, $value, int $ttl = 0): Promise;
+    public function save(string $key, array|float|int|string|null $value, int $ttl = 0): Promise;
 
     /**
      * Clear storage.
