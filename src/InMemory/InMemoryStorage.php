@@ -36,8 +36,7 @@ final class InMemoryStorage
 
     public static function instance(): self
     {
-        if (self::$instance === null)
-        {
+        if (self::$instance === null) {
             self::$instance = new self();
         }
 
@@ -74,12 +73,10 @@ final class InMemoryStorage
      */
     public function get(string $key): array|float|int|string|null
     {
-        if (isset($this->expires[$key]))
-        {
+        if (isset($this->expires[$key])) {
             $expired = !($this->expires[$key] === -1) && \time() > $this->expires[$key];
 
-            if ($expired)
-            {
+            if ($expired) {
                 $this->remove($key);
 
                 return null;

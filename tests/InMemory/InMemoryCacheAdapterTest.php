@@ -17,6 +17,7 @@ namespace ServiceBus\Cache\Tests\InMemory;
 use PHPUnit\Framework\TestCase;
 use ServiceBus\Cache\InMemory\InMemoryCacheAdapter;
 use ServiceBus\Cache\InMemory\InMemoryStorage;
+
 use function Amp\Promise\wait;
 
 /**

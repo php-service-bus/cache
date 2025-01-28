@@ -15,6 +15,7 @@ namespace ServiceBus\Cache\InMemory;
 use Amp\Promise;
 use Amp\Success;
 use ServiceBus\Cache\CacheAdapter;
+
 use function Amp\call;
 
 final class InMemoryCacheAdapter implements CacheAdapter
@@ -50,9 +51,9 @@ final class InMemoryCacheAdapter implements CacheAdapter
 
     public function clear(): Promise
     {
+        /** @phpstan-ignore return.type */
         return call(
-            function (): void
-            {
+            function (): void {
                 $this->storage->clear();
             }
         );
